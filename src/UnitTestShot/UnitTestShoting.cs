@@ -19,6 +19,7 @@ namespace UnitTestShot
             jogo.VerificarPontuacao();
             jogo.VerificarPersonagens();
             jogo.VerificarPontuacao();
+            jogo.V;
 
 
         }

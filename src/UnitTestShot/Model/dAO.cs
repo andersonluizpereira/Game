@@ -33,5 +33,12 @@ namespace UnitTestShot.Model
             Dados.usuarios.Remove(Dados.usuarios.FirstOrDefault(p=>p.Nome== @ConfigurationManager.AppSettings["usuarioaremover"].ToString()));
         }
 
+        public IEnumerable<List<Usuario>> ArmasMaisUtilizadas()
+        {
+            return usuarios.GroupBy(p => p.Arma).Select(l => l.ToList());
+            
+        }
+
+
     }
 }

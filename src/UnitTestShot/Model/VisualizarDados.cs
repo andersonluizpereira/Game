@@ -8,7 +8,7 @@ using ListarUsuario = UnitTestShot.Model.Dao;
 
 namespace UnitTestShot.Model
 {
-   public class VisualizarDados : Dao
+   public class VisualizarDados : Dao, IDao
     {
         public VisualizarDados()
         {
@@ -21,6 +21,17 @@ namespace UnitTestShot.Model
             foreach (var lista in OrdernarPontuacao(Dados.usuarios))
             {
                 Debug.WriteLine(DateTime.Now +" Nome : " + lista.Nome + " Pontuação :" + lista.Pontos + " Armas preferidas " + lista.Arma);
+            }
+        }
+
+        public void VerArmasMaisUtilizadas()
+        {
+            foreach (var armasMaisUtilizadas in ArmasMaisUtilizadas())
+            {
+                foreach (var armas in armasMaisUtilizadas)
+                {
+                    Debug.WriteLine(DateTime.Now +" "+armas.Arma +" do personagem "+armas.Nome);
+                }
             }
         }
         

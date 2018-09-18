@@ -27,6 +27,11 @@ namespace UnitTestShot.Model
             visualizarDados = new VisualizarDados();
             visualizarDados.VisualizarPontuacao();
         }
+        public void VerArmasMaisUtilizadas()
+        {
+            visualizarDados = new VisualizarDados();
+            visualizarDados.VerArmasMaisUtilizadas();
+        }
 
         public void VerificarPersonagens()
         {

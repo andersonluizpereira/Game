@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Model\Dados.cs" />
     <Compile Include="Model\Dao.cs" />
+    <Compile Include="Model\IDao.cs" />
     <Compile Include="Model\IJogo.cs" />
     <Compile Include="Model\Jogo.cs" />
     <Compile Include="Model\LerArquivo.cs" />

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace UnitTestShot.Model
 {
-    public interface IJogo
+    public interface IDao
     {
-        void IniciarJogo();
-        void CarregarConfiguracao();
-        void VerificarPontuacao();
-        void VerificarPersonagens();
+        void VisualizarPontuacao();
         void VerArmasMaisUtilizadas();
     }
 }
