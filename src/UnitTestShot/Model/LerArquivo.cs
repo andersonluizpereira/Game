@@ -27,13 +27,14 @@ namespace UnitTestShot.Model
             {
                 var column = lines[i].Split(';');
 
-                Dados.usuarios.Add(new Usuario
+                var usr = new Usuario
                 {
                     Id = ListarUsuario.PegarUltimoId(),
                     Nome = column[0],
                     Pontos = Convert.ToInt32(column[1]),
                     Arma = column[2],
-                });
+                };
+                ListarUsuario.usuarios.Add(usr);
             }
             
         }

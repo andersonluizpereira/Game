@@ -12,8 +12,10 @@ namespace UnitTestShot.Model
 
         public Dados()
         {
+            if (usuarios==null) { 
             usuarios = new List<Usuario>();
             this.PreencherLista();
+            }
         }
 
         public void PreencherLista()
@@ -44,7 +46,7 @@ namespace UnitTestShot.Model
             });
         }
 
-        internal void Cadastrar(Usuario usr)
+        public void Cadastrar(Usuario usr)
         {
             var usuario = usuarios.FirstOrDefault(p=>p.Id==usr.Id);
             if (usuario == null)

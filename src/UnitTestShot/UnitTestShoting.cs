@@ -13,13 +13,20 @@ namespace UnitTestShot
         [TestMethod]
         public void TestMethodInicial()
         {
+            Debug.WriteLine("Abrindo Jogo");
             var jogo = new Jogo();
+            Debug.WriteLine("Iniciando Jogo");
             jogo.IniciarJogo();
+            jogo.VerificarPontuacao();
+            Debug.WriteLine("Carregando configuração do Jogo");
             jogo.CarregarConfiguracao();
             jogo.VerificarPontuacao();
+            Debug.WriteLine("Verificando a configuração dos personagens para serem removidos");
             jogo.VerificarPersonagens();
             jogo.VerificarPontuacao();
-            jogo.V;
+            Debug.WriteLine("Verificando as armas mais utilizadas");
+            jogo.VerArmasMaisUtilizadas();
+            Debug.WriteLine("Fim Jogo");
 
 
         }

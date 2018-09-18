@@ -11,13 +11,6 @@ namespace UnitTestShot.Model
    public class Dao : Dados
     {
       
-
-        public Dao()
-        {
-            this.PreencherLista();
-        }
-
-
         public List<Usuario> OrdernarPontuacao(List<Usuario> usrs)
         {
             return usrs.OrderByDescending(p=>p.Pontos).ToList();
@@ -30,14 +23,21 @@ namespace UnitTestShot.Model
 
         public static void VerificarPersonagensLista()
         {
-            Dados.usuarios.Remove(Dados.usuarios.FirstOrDefault(p=>p.Nome== @ConfigurationManager.AppSettings["usuarioaremover"].ToString()));
+            var usr = Dados.usuarios.FirstOrDefault(p => p.Nome == ConfigurationManager.AppSettings["usuarioaremover"]);
+            Dados.usuarios.Remove(usr);
         }
 
         public IEnumerable<List<Usuario>> ArmasMaisUtilizadas()
         {
             return usuarios.GroupBy(p => p.Arma).Select(l => l.ToList());
-            
         }
+
+        public void Cadastrar(Usuario usuario)
+        {
+            Dados.usuarios.Add(usuario);
+        }
+
+
 
 
     }
